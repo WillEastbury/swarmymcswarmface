@@ -1,0 +1,13 @@
+{
+  "name": "swarmymcswarmface",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Issue-specialized agentic worker process using GitHub Copilot SDK",
+  "scripts": {
+    "start": "node src/issue-worker.js"
+  },
+  "dependencies": {
+    "@github/copilot-sdk": "*"
+  }
+}

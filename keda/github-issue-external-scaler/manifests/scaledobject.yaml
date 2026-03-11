@@ -1,0 +1,16 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: github-issue-worker
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: issue-worker
+  pollingInterval: 5
+  cooldownPeriod: 60
+  minReplicaCount: 0
+  maxReplicaCount: 10
+  triggers:
+    - type: external
+      metadata:
+        scalerAddress: github-issue-external-scaler.keda.svc.cluster.local:9090
