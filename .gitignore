@@ -1,0 +1,12 @@
+node_modules/
+*.log
+*.tmp
+
+# Build artifacts
+dist/
+bin/
+obj/
+*.out
+
+# Go artifacts
+keda/github-issue-external-scaler/github-issue-external-scaler
